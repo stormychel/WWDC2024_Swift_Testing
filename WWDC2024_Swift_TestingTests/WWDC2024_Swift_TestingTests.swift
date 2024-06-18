@@ -35,5 +35,16 @@ struct WWDC2024_Swift_TestingTests {
         @Test(.enabled(if: 1 == 1)) func testConditions() async throws {
             print("testConditions() - 1 == 1")
         }
+        
+        @Test(.disabled("Disabled for testing.")) func testDisabled() async throws {
+            print("testDisabled() - THIS WILL NEVER RUN :(")
+        }
+        
+        @Test(.disabled("Due to a known crash."),
+              .bug("www.apple.com", "Crashes at <symbol>.")) func testDisabledDueToCrash() async throws {
+            
+            print("testDisabled() - THIS WILL NEVER RUN :(")
+        }
+        
     }
 }
