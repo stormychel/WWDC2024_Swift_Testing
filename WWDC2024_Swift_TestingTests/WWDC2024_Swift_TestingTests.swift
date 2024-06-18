@@ -46,5 +46,10 @@ struct WWDC2024_Swift_TestingTests {
             print("testDisabled() - THIS WILL NEVER RUN :(")
         }
         
+        @Test(.enabled(if: 1 == 1))
+        @available(iOS 13.0, macOS 10.1, *)
+        func testMacOnly() async throws {
+            print("testMacOnly() - 1 == 1")
+        }
     }
 }
