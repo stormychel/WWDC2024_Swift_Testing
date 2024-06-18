@@ -9,7 +9,7 @@ import Testing
 
 struct WWDC2024_Swift_TestingTests {
 
-    @Test func testExpect() async throws {
+    @Test("testExpect") func testExpect() async throws {
         print("testExpect()")
         
         let expected: Int = 36
@@ -19,7 +19,7 @@ struct WWDC2024_Swift_TestingTests {
         #expect(number * multiplier == expected)
     }
 
-    @Test func testRequire() async throws {
+    @Test("testRequire") func testRequire() async throws {
         print("testRequire()")
   
 //        let expectedOptionals: [Int?] = [] // Expectation failed: (expectedOptionals → []).first → nil → nil
