@@ -52,9 +52,25 @@ struct WWDC2024_Swift_TestingTests {
             print("testMacOnly() - 1 == 1")
         }
         
-        /* MARK: not sure about this one
+        /* MARK: not sure about this one - TODO: explore Tags
         @Test(.tags(.testTag)) func testTags() async throws {
             print("testTags()")
+        }
+        */
+        
+        // TODO: explore @Suite macro
+        
+        /* TODO: explore arguments + parameters
+        @Test (arguments: [
+            "A Beach",
+            "By the Lake",
+            "Camping in the Woods",
+        ])
+        func mentionsFor_A_Beach(videoName: String) async throws {
+            let videoLibrary = try await VideoLibrary()
+            let video = try #require(await videoLibrary.video(named: "A Beach"))
+            #expect(!video.mentionedContinents.isEmpty)
+            #expect(video.mentionedContinents.count <= 3)
         }
         */
         
