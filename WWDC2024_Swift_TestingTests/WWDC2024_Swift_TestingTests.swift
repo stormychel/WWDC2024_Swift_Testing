@@ -51,5 +51,14 @@ struct WWDC2024_Swift_TestingTests {
         func testMacOnly() async throws {
             print("testMacOnly() - 1 == 1")
         }
+        
+        /* MARK: not sure about this one
+        @Test(.tags(.testTag)) func testTags() async throws {
+            print("testTags()")
+        }
+        */
+        
+        
     }
 }
+
