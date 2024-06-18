@@ -31,5 +31,9 @@ struct WWDC2024_Swift_TestingTests {
             
             #expect(number * multiplier == expected)
         }
+        
+        @Test(.enabled(if: 1 == 1)) func testConditions() async throws {
+            print("testConditions() - 1 == 1")
+        }
     }
 }
